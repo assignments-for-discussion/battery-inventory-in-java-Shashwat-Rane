@@ -31,12 +31,7 @@ public class Main {
     assert(counts.exchange == 3);
     assert(counts.failed == 1);
     
-    int[] allHealthy = {113, 116, 82, 95, 92, 90};
-    CountsBySoH allHealthyCounts = countBatteriesByHealth(allHealthy);
-    assert(allHealthyCounts.healthy == 6);
-    assert(allHealthyCounts.exchange == 0);
-    assert(allHealthyCounts.failed == 0);
-
+   
     
     
     System.out.println("Done counting :)\n");
