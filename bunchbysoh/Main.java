@@ -43,11 +43,11 @@ public class Main {
     assert(allFailedcounts.exchange == 0);
     assert(allFailedcounts.failed == 9);
 
-    int[] allFailed = {0,62,80,100};
-    CountsBySoH allFailedcounts = countBatteriesByHealth(allFailed);
-    assert(allFailedcounts.healthy == 1);
-    assert(allFailedcounts.exchange == 1);
-    assert(allFailedcounts.failed == 2);
+    int[] allBoundary = {0,62,80,100};
+    CountsBySoH allBoundarycounts = countBatteriesByHealth(allBoundary);
+    assert(allBoundarycounts.healthy == 1);
+    assert(allBoundarycounts.exchange == 1);
+    assert(allBoundarycounts.failed == 2);
    
     
     System.out.println("Done counting :)\n");
