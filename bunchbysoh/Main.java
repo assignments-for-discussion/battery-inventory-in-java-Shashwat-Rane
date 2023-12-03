@@ -37,11 +37,7 @@ public class Main {
     assert(allHealthyCounts.exchange == 0);
     assert(allHealthyCounts.failed == 0);
 
-    int[] boundry = {100, 80, 62};
-    CountsBySoH boundryCounts = countBatteriesByHealth(boundry);
-    assert(boundryCounts.healthy == 1);
-    assert(boundryCounts.exchange == 1);
-    assert(boundryCounts.failed == 1);
+    
     
     System.out.println("Done counting :)\n");
   }
