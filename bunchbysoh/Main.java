@@ -30,6 +30,19 @@ public class Main {
     assert(counts.healthy == 2);
     assert(counts.exchange == 3);
     assert(counts.failed == 1);
+    
+    int[] allHealthy = {113, 116, 82, 95, 92, 90};
+    CountsBySoH allHealthyCounts = countBatteriesByHealth(allHealthy);
+    assert(allHealthyCounts.healthy == 6);
+    assert(allHealthyCounts.exchange == 0);
+    assert(allHealthyCounts.failed == 0);
+
+    int[] boundry = {100, 80, 62};
+    CountsBySoH boundryCounts = countBatteriesByHealth(boundry);
+    assert(boundryCounts.healthy == 1);
+    assert(boundryCounts.exchange == 1);
+    assert(boundryCounts.failed == 1);
+    
     System.out.println("Done counting :)\n");
   }
 
