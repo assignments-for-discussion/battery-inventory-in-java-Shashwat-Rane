@@ -30,6 +30,12 @@ public class Main {
     assert(counts.healthy == 2);
     assert(counts.exchange == 3);
     assert(counts.failed == 1);
+
+    int[] allHealthy = {120,120,120,120,120,120};
+    CountsBySoH allHealthycounts = countBatteriesByHealth(allHealthy);
+    assert(allHealthycounts.healthy == 6);
+    assert(allHealthycounts.exchange == 0);
+    assert(allHealthycounts.failed == 0);
     
    
     
