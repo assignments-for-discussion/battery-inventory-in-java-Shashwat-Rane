@@ -37,8 +37,13 @@ public class Main {
     assert(allHealthycounts.exchange == 0);
     assert(allHealthycounts.failed == 0);
     
-   
-    
+    int[] allFailed = {0,5,10,2,4,6,7,11,32};
+    CountsBySoH allFailedcounts = countBatteriesByHealth(allFailed);
+    assert(allFailedcounts.healthy == 0);
+    assert(allFailedcounts.exchange == 0);
+    assert(allFailedcounts.failed == 9);
+
+     
     
     System.out.println("Done counting :)\n");
   }
